@@ -13,8 +13,8 @@ const ButtonContainer = styled.div`
     box-shadow: 2px 4px 12px rgba(60, 60, 60, 0.5);
   }
 
-  background-color: ${props => (props.type == 'default' ? '#FFFFFF' : '#FFCA52')};
-  color: ${props => (props.type == 'default' ? '#3C3C3C' : '#FFFFFF')};
+  background-color: ${props => (props.type === 'default' ? '#FFFFFF' : '#FFCA52')};
+  color: ${props => (props.type === 'default' ? '#3C3C3C' : '#FFFFFF')};
   box-shadow: 2px 4px 12px rgba(60, 60, 60, 0.12);
   border-radius: 30px;
 `;

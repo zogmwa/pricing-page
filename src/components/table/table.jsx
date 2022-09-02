@@ -31,7 +31,7 @@ const InfoImg = styled.img`
   right: 56px;
 `;
 
-const typeImg = styled.img`
+const TypeImg = styled.img`
   width: 20px;
   height: 18px;
 `;
@@ -56,16 +56,16 @@ export default function CustomTable({ tableData }) {
             {rowData.title}
             <InfoImg src={info} />
           </RowTitleCell>
-          <RowType important={rowData.typeA != 'NEVER' ? true : false}>
-            {rowData.typeA == 'CHECKED' ? 
-              <img src={checkmark} alt='checked' /> 
-              : (rowData.typeA == 'UNCHECKED' ? <img src={closemark} alt='closemark' /> : rowData.typeA)
+          <RowType important={rowData.typeA !== 'NEVER' ? true : false}>
+            {rowData.typeA === 'CHECKED' ? 
+              <TypeImg src={checkmark} alt='checked' /> 
+              : (rowData.typeA === 'UNCHECKED' ? <TypeImg src={closemark} alt='closemark' /> : rowData.typeA)
             }
           </RowType>
-          <RowType important={rowData.typeA != 'NEVER' ? true : false}>
-            {rowData.typeB == 'CHECKED' ? 
-              <img src={checkmark} alt='checked' /> 
-              : (rowData.typeB == 'UNCHECKED' ? <img src={closemark} alt='closemark' /> : rowData.typeB)
+          <RowType important={rowData.typeA !== 'NEVER' ? true : false}>
+            {rowData.typeB === 'CHECKED' ? 
+              <TypeImg src={checkmark} alt='checked' /> 
+              : (rowData.typeB === 'UNCHECKED' ? <TypeImg src={closemark} alt='closemark' /> : rowData.typeB)
             }
           </RowType>
         </TableRow>
