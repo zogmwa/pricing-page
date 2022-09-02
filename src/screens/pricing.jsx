@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Switch from '../components/switch/switch';
 import PricingCard from '../components/pricing-card/pricing-card';
+import PricingTable from '../components/table/table';
 import containerVector from '../assets/bg.png';
 
 const PricingPageContainer = styled.div`
@@ -18,9 +19,10 @@ const PricingPageBody = styled.div`
 
 const ImageVector = styled.img`
   position: absolute;
+  transform: translate(-50%, 0%);
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: 1440px;
 `;
 
 const PricingContent = styled.div`
@@ -66,6 +68,25 @@ const PricingCardSection = styled.div`
 `;
 
 export default function PricingPage() {
+  const tableData = [
+    {title: 'Unlimited Free Tracking', important: false, typeA: 'FOREVER', typeB: 'FOREVER'},
+    {title: 'Signature Ad', important: false, typeA: 'NEVER', typeB: 'NEVER'},
+    {title: 'Mobile Apps (iOS, Android)', important: false, typeA: 'CHECKED', typeB: 'CHECKED'},
+    {title: 'Email / Desktop Alerts', important: false, typeA: 'CHECKED', typeB: 'CHECKED'},
+    {title: 'Ping Sequences', important: false, typeA: 'CHECKED', typeB: 'CHECKED'},
+    {title: 'Signature Generator', important: false, typeA: 'CHECKED', typeB: 'CHECKED'},
+    {title: 'Email Support', important: false, typeA: 'UNCHECKED', typeB: 'CHECKED'},
+    {title: 'Group emails Tracked', important: false, typeA: 'BASIC', typeB: 'ADVANCED'},
+    {title: 'Mail Analytics', important: false, typeA: 'BASIC', typeB: 'ADVANCED'},
+    {title: 'Email Engagement Score', important: false, typeA: 'BASIC', typeB: 'ADVANCED'},
+    {title: 'Subdomain configuration', important: false, typeA: 'UNCHECKED', typeB: 'CHECKED'},
+    {title: 'Recipient Timeline', important: true, typeA: 'UNCHECKED', typeB: 'CHECKED'},
+    {title: 'Ping Sequence Analyzer', important: true, typeA: 'UNCHECKED', typeB: 'CHECKED'},
+    {title: 'AI Recommendations', important: true, typeA: 'UNCHECKED', typeB: 'CHECKED'},
+    {title: 'Link Tracking', important: false, typeA: 'UNCHECKED', typeB: 'CHECKED'},
+    {title: 'Attachment Tracking', important: false, typeA: 'UNCHECKED', typeB: 'CHECKED'}
+  ]
+
   return (
     <PricingPageContainer>
       <PricingPageBody>
@@ -88,6 +109,7 @@ export default function PricingPage() {
               description='per user, billed yearly'
             />
           </PricingCardSection>
+          <PricingTable tableData={tableData} />
         </PricingContent>
       </PricingPageBody>
     </PricingPageContainer>
