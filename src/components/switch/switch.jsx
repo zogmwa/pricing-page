@@ -11,7 +11,7 @@ const CheckBoxLabel = styled.label`
   width: 46px;
   height: 26px;
   border-radius: 15px;
-  background: #dbd9d9;
+  background: #E2EAF0;;
   cursor: pointer;
   &::after {
     content: "";
@@ -20,7 +20,6 @@ const CheckBoxLabel = styled.label`
     width: 26px;
     height: 26px;
     background: #0D88E3;
-    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
     transition: 0.2s;
   }
 `;
@@ -32,7 +31,7 @@ const CheckBox = styled.input`
   height: 26px;
   margin: 0;
   &:checked + ${CheckBoxLabel} {
-    background: #E2EAF0;
+    background: #B6D7F1;
     &::after {
       content: "";
       display: block;
