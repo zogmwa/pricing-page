@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Switch from '../components/switch/switch';
+import PricingCard from '../components/pricing-card/pricing-card';
 import containerVector from '../assets/bg.png';
 
 const PricingPageContainer = styled.div`
@@ -33,12 +34,14 @@ const PricingContent = styled.div`
   background: #FFFFFF;
   box-shadow: 2px 2px 35px rgba(25, 25, 31, 0.1);
   border-radius: 40px;
-  padding: 45px 0 45px 0;
+  padding: 45px 68px 45px 50px;
 `;
 
 const PricingHeader = styled.div`
   display: flex;
   justify-content: center;
+  padding-bottom: 36px;
+  border-bottom: 1.5px solid #E2EAF0;
 `;
 
 const SwitchLabel = styled.span`
@@ -56,6 +59,12 @@ const SwitchContent = styled.span`
   margin-left: 18px;
 `;
 
+const PricingCardSection = styled.div`
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+`;
+
 export default function PricingPage() {
   return (
     <PricingPageContainer>
@@ -67,6 +76,18 @@ export default function PricingPage() {
             <Switch />
             <SwitchContent>Anuual Pricing - save 30%!</SwitchContent>
           </PricingHeader>
+          <PricingCardSection>
+            <PricingCard 
+              type='free' 
+              price={0} 
+              description='' 
+            />
+            <PricingCard 
+              type='PRO'
+              price={9.99}
+              description='per user, billed yearly'
+            />
+          </PricingCardSection>
         </PricingContent>
       </PricingPageBody>
     </PricingPageContainer>
