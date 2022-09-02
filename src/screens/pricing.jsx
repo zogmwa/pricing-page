@@ -4,6 +4,7 @@ import Switch from '../components/switch/switch';
 import PricingCard from '../components/pricing-card/pricing-card';
 import PricingTable from '../components/table/table';
 import containerVector from '../assets/bg.png';
+import logo from '../assets/logo.png';
 
 const PricingPageContainer = styled.div`
   position: relative;
@@ -23,6 +24,19 @@ const ImageVector = styled.img`
   top: 0;
   left: 50%;
   width: 1440px;
+`;
+
+const LogoContainer = styled.div`
+  position: absolute;
+  width: 1440px;
+  transform: translate(-50%, 0%);
+  left: 50%;
+`
+
+const Logo = styled.img`
+  position: absolute;
+  top: 32px;
+  left: 50px;
 `;
 
 const PricingContent = styled.div`
@@ -91,6 +105,9 @@ export default function PricingPage() {
     <PricingPageContainer>
       <PricingPageBody>
         <ImageVector src={containerVector} />
+        <LogoContainer>
+          <Logo src={logo} alt="logo" />
+        </LogoContainer>
         <PricingContent>
           <PricingHeader>
             <SwitchLabel>Monthly Pricing</SwitchLabel>
